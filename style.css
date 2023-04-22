@@ -6,3 +6,148 @@
 body {
 	margin: 0;
 	padding: 0;
+}
+/* Header Styles */
+header {
+	background-color: #fff;
+	padding: 20px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+	}
+	
+	header h1 {
+	text-align: center;
+	font-size: 36px;
+	font-weight: bold;
+	font-family: 'Helvetica Neue', sans-serif;
+	margin-top: 0;
+	}
+	
+	nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+	
+	nav li {
+	margin: 0 20px;
+	}
+	
+	nav a {
+	color: #333;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: 'Helvetica Neue', sans-serif;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+	}
+	
+	nav a:hover {
+	color: #666;
+	}
+	
+	/* Main Styles */
+	main {
+	margin-top: 100px;
+	padding: 50px;
+	background-color: #f6f6f6;
+	}
+	
+	section {
+	margin-bottom: 50px;
+	}
+	
+	section h2 {
+	font-size: 28px;
+	font-weight: bold;
+	font-family: 'Helvetica Neue', sans-serif;
+	margin-bottom: 20px;
+	}
+	
+	section ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	}
+	
+	section li {
+	margin: 20px 0;
+	}
+	
+	section h3 {
+	font-size: 22px;
+	font-weight: bold;
+	font-family: 'Helvetica Neue', sans-serif;
+	margin-bottom: 10px;
+	}
+	
+	section p {
+	font-size: 16px;
+	font-family: 'Helvetica Neue', sans-serif;
+	margin-bottom: 10px;
+	}
+	
+	section ul li ul {
+	margin-top: 10px;
+	margin-left: 20px;
+	}
+	
+	section ul li ul li {
+	margin: 5px 0;
+	}
+	
+	section a {
+	color: #333;
+	text-decoration: none;
+	font-size: 16px;
+	font-family: 'Helvetica Neue', sans-serif;
+	transition: all 0.3s ease;
+	}
+	
+	section a:hover {
+	color: #666;
+	}
+	
+	/* Analog Layout Sharing Styles */
+	section#analog {
+	text-align: center;
+	}
+	
+	section#analog p {
+	margin-bottom: 30px;
+	}
+	
+	section#analog ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	}
+	
+	section#analog li {
+	margin: 20px;
+	}
+	
+	section#analog img {
+	max-width: 100%;
+	height: auto;
+	}
+	
+	/* Footer Styles */
+	footer {
+	background-color: #333;
+	padding: 20px 0;
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+	font-family: 'Helvetica Neue', sans-serif;
+	margin-top: 50px;
+	}
