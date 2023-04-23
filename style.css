@@ -126,11 +126,14 @@ img {
 }
 
 .icon {
-    width: 16px;
-    height: 16px;
     display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
     vertical-align: middle;
-}
+  }
 
 footer {
     background-color: #00305e;
