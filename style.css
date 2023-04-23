@@ -125,6 +125,13 @@ img {
     height: 48px;
 }
 
+icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 footer {
     background-color: #00305e;
     color: #fff;
