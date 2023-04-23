@@ -50,7 +50,12 @@ nav ul {
 }
 
 nav li {
-    margin-left: 30px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a4a4a;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
 nav li:first-child {
