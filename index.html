@@ -1,655 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xiangdong Jia - Analog Layout Design Manager</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* General Styles */
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #1a73e8;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-            --text-color: #333;
-            --text-light: #777;
-            --spacing: 1rem;
-            --border-radius: 8px;
-            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
-            --nav-bg: #ffffff;
-            --nav-text: #2c3e50;
-            --nav-hover: #1a73e8;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xiangdong Jia - Analog Layout Design Manager</title>
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <!-- SEO Meta -->
+  <meta name="description" content="Xiangdong Jia - Analog Layout Design Engineering Manager, specializing in advanced analog custom layout design, publications, and blog.">
+  <meta name="keywords" content="Xiangdong Jia, Analog Layout, Engineering Manager, IC Design, VLSI, Publications, Blog">
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 16px;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: #f9f9f9;
-            padding-top: 140px; /* Increased to account for fixed header and nav */
-        }
+  <!-- Open Graph -->
+  <meta property="og:title" content="Xiangdong Jia - Analog Layout Design Manager">
+  <meta property="og:description" content="Specializing in advanced analog custom layout design and methodology.">
+  <meta property="og:url" content="https://jxd1207.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jxd1207.github.io/profile.jpg">
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 var(--spacing);
-        }
+  <!-- Font & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        /* Header Styles */
-        header {
-            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-            box-shadow: var(--box-shadow);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-        }
-
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 var(--spacing);
-        }
-
-        .profile-section {
-            display: flex;
-            align-items: center;
-        }
-
-        .profile-img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--light-color);
-            background-color: #95a5a6;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            margin-right: 1rem;
-        }
-
-        .title-section h1 {
-            font-size: 1.8rem;
-            margin-bottom: 0.2rem;
-            text-align: left;
-            color: white;
-        }
-
-        .title-section p {
-            font-size: 1rem;
-            color: var(--light-color);
-            text-align: left;
-        }
-
-        /* Navigation - FIXED */
-        nav {
-            background-color: var(--nav-bg);
-            padding: 1rem 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            top: 80px; /* Position below header */
-            left: 0;
-            right: 0;
-            z-index: 999;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 var(--spacing);
-        }
-
-        nav li {
-            margin: 0 0.5rem;
-        }
-
-        nav a {
-            color: var(--nav-text);
-            text-decoration: none;
-            font-weight: 600;
-            padding: 0.6rem 1rem;
-            border-radius: var(--border-radius);
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            font-size: 1rem;
-            background-color: rgba(26, 115, 232, 0.1);
-            border: 1px solid rgba(26, 115, 232, 0.2);
-        }
-
-        nav a:hover {
-            background-color: var(--nav-hover);
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        nav i {
-            margin-right: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        /* Main Content */
-        main {
-            padding: 2rem 0;
-        }
-
-        section {
-            background: white;
-            border-radius: var(--border-radius);
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: var(--box-shadow);
-        }
-
-        h2 {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--secondary-color);
-            display: inline-block;
-            font-size: 1.8rem;
-        }
-
-        h3 {
-            color: var(--secondary-color);
-            margin: 1rem 0 0.5rem;
-            font-size: 1.3rem;
-        }
-
-        /* Experience Section */
-        .timeline {
-            position: relative;
-            margin-left: 1rem;
-            padding-left: 2rem;
-            border-left: 2px solid var(--secondary-color);
-        }
-
-        .timeline-item {
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-        .timeline-item:before {
-            content: '';
-            position: absolute;
-            left: -2.5rem;
-            top: 0.5rem;
-            width: 1rem;
-            height: 1rem;
-            border-radius: 50%;
-            background: var(--secondary-color);
-        }
-
-        .company-header {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 0.8rem;
-        }
-
-        .company-logo {
-            width: 50px;
-            height: 50px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1.2rem;
-            font-size: 1.8rem;
-            color: white;
-            flex-shrink: 0;
-        }
-
-        .cadence-logo {
-            background-color: #C72127;
-        }
-
-        .rambus-logo {
-            background-color: #2D6BB5;
-        }
-
-        .analogx-logo {
-            background-color: #6B7C93;
-        }
-
-        .date {
-            color: var(--text-light);
-            font-style: italic;
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-        }
-
-        .location {
-            color: var(--text-light);
-            font-size: 1rem;
-            margin-bottom: 0.8rem;
-        }
-
-        /* Education Section */
-        .education-item {
-            margin-bottom: 1.5rem;
-        }
-
-        /* Papers Section */
-        .paper {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: var(--light-color);
-            border-radius: var(--border-radius);
-        }
-
-        .paper p {
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-
-        /* Blog Section */
-        .blog-post {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            border-left: 4px solid var(--accent-color);
-            background: #fff;
-            border-radius: 0 var(--border-radius) var(--border-radius) 0;
-            transition: var(--transition);
-        }
-
-        .blog-post:hover {
-            transform: translateX(5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .read-more {
-            display: inline-block;
-            padding: 0.6rem 1.2rem;
-            background: var(--accent-color);
-            color: white;
-            text-decoration: none;
-            border-radius: var(--border-radius);
-            transition: var(--transition);
-            margin-top: 1rem;
-            font-weight: 600;
-        }
-
-        .read-more:hover {
-            background: #c0392b;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        /* Contact Section */
-        .contact-info {
-            text-align: center;
-            padding: 2rem;
-            background: var(--light-color);
-            border-radius: var(--border-radius);
-        }
-
-        .contact-email {
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            margin: 1rem 0;
-            font-weight: 600;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: var(--primary-color);
-            color: white;
-            margin: 0 0.5rem;
-            text-decoration: none;
-            transition: var(--transition);
-            font-size: 1.2rem;
-        }
-
-        .social-links a:hover {
-            background: var(--secondary-color);
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark-color);
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 2rem;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            body {
-                padding-top: 130px;
-            }
-            
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .profile-section {
-                margin-bottom: 0.8rem;
-                justify-content: center;
-            }
-            
-            .title-section h1,
-            .title-section p {
-                text-align: center;
-            }
-            
-            nav {
-                top: 70px;
-                padding: 0.8rem 0;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            nav li {
-                margin: 0.3rem 0;
-                width: 100%;
-                text-align: center;
-            }
-            
-            nav a {
-                justify-content: center;
-                padding: 0.8rem;
-            }
-            
-            .company-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .company-logo {
-                margin-bottom: 0.8rem;
-            }
-            
-            .timeline {
-                margin-left: 0;
-                padding-left: 1.5rem;
-            }
-            
-            .timeline-item:before {
-                left: -1.8rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .title-section h1 {
-                font-size: 1.5rem;
-            }
-            
-            section {
-                padding: 1.5rem;
-            }
-            
-            h2 {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
+  <style>
+    body {font-family: Arial, sans-serif;margin:0;padding:0;background:#f8f9fa;color:#333;line-height:1.6;}
+    header {background:#fff;padding:1rem 2rem;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+    header h1 {margin:0;font-size:1.8rem;}
+    header p {margin:0;color:#666;font-size:1rem;}
+    nav {margin-top:0.5rem;}
+    nav a {margin-right:1rem;color:#0077b6;text-decoration:none;font-weight:bold;}
+    nav a:hover {text-decoration:underline;}
+    main {max-width:900px;margin:2rem auto;padding:0 1rem;}
+    section {margin-bottom:3rem;}
+    h2 {color:#023e8a;border-bottom:2px solid #0077b6;padding-bottom:0.3rem;}
+    .experience,.education,.publications,.blog,.contact {background:#fff;padding:1.5rem;border-radius:10px;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+    .experience h3,.education h3 {margin-top:0;color:#03045e;}
+    .job {margin-bottom:1.5rem;}
+    .job h3 {margin:0;}
+    .job p {margin:0.3rem 0;}
+    .contact a {margin-right:0.8rem;font-size:1.4rem;color:#0077b6;}
+    .contact a:hover {color:#03045e;}
+    footer {text-align:center;padding:1.5rem;background:#fff;border-top:1px solid #ddd;margin-top:3rem;}
+    #backToTop {position:fixed;bottom:30px;right:30px;display:none;background:#0077b6;color:#fff;border:none;border-radius:50%;width:45px;height:45px;cursor:pointer;box-shadow:0 3px 6px rgba(0,0,0,0.2);font-size:18px;}
+    #backToTop:hover {background:#03045e;}
+    @media (max-width:600px){nav a{display:block;margin:0.3rem 0;}}
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="profile-section">
-                <div class="profile-img">
-                    <span>XJ</span>
-                </div>
-                <div class="title-section">
-                    <h1>Xiangdong Jia</h1>
-                    <p>Analog Layout Design Engineering Manager</p>
-                </div>
-            </div>
-        </div>
-    </header>
-
+  <header>
+    <h1>Xiangdong Jia</h1>
+    <p>Analog Layout</p>
     <nav>
-        <ul>
-            <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
-            <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
-            <li><a href="#papers"><i class="fas fa-file-alt"></i> Publications</a></li>
-            <li><a href="#blog"><i class="fas fa-blog"></i> Blog</a></li>
-            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </header>
 
-    <main class="container">
-        <section id="experience">
-            <h2>Professional Experience</h2>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="company-header">
-                        <div class="company-logo cadence-logo">
-                            <i class="fas fa-microchip"></i>
-                        </div>
-                        <div>
-                            <h3><a href="https://www.cadence.com/" target="_blank">Cadence Design Systems</a></h3>
-                            <p class="date">Sep 2023 - Present · 1 yr+</p>
-                            <p class="location">Toronto, Ontario, Canada</p>
-                        </div>
-                    </div>
-                    <p><strong>Design Engineering Manager</strong></p>
-                    <ul>
-                        <li>Collaborate across multiple engineering groups to lead analog layout in the industry's most advanced technology nodes</li>
-                        <li>Manage and mentor a team of analog layout engineers</li>
-                        <li>Drive innovation in analog layout methodologies and best practices</li>
-                    </ul>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="company-header">
-                        <div class="company-logo rambus-logo">
-                            <i class="fas fa-memory"></i>
-                        </div>
-                        <div>
-                            <h3><a href="https://www.rambus.com/" target="_blank">Rambus</a></h3>
-                            <p class="date">Jul 2021 - Sep 2023 · 2 yrs 3 mos</p>
-                            <p class="location">Toronto, Ontario, Canada</p>
-                        </div>
-                    </div>
-                    <p><strong>Physical Design Manager</strong></p>
-                    <ul>
-                        <li>Led and managed a team of 7 Serdes layout engineers</li>
-                        <li>Directed the analog layout team in the successful tapeout of the PCIE6 project, overcoming strict technical constraints</li>
-                        <li>Acquired by Cadence in Q3 2023</li>
-                        <li><a href="https://www.rambus.com/interface-ip/serdes/pcie6-phy/" target="_blank">View PCIE6 PHY details</a></li>
-                    </ul>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="company-header">
-                        <div class="company-logo analogx-logo">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
-                        <div>
-                            <h3><a href="https://www.linkedin.com/company/analogx-inc/" target="_blank">AnalogX</a></h3>
-                            <p class="date">May 2018 - Jul 2021 · 3 yrs 2 mos</p>
-                            <p class="location">Toronto, Ontario, Canada</p>
-                        </div>
-                    </div>
-                    <p><strong>Physical Designer/Manager</strong></p>
-                    <ul>
-                        <li>Led and managed Serdes Layout Team</li>
-                        <li>Serdes layout design in 5nm/7nm/22nm technologies</li>
-                        <li>Company acquired by Rambus in 2021</li>
-                        <li><a href="https://www.rambus.com/analogx/" target="_blank">About AnalogX acquisition</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+  <main>
+    <!-- Experience -->
+    <section id="experience" class="experience">
+      <h2>Experience</h2>
 
-        <section id="education">
-            <h2>Education</h2>
-            
-            <div class="education-item">
-                <h3>Concordia University - Montreal, Canada</h3>
-                <p class="date">Master's degree (MASc), Electrical and Computer Engineering</p>
-                <p><a href="https://www.concordia.ca/ginacody.html" target="_blank">Gina Cody School of Engineering and Computer Science</a></p>
-            </div>
-            
-            <div class="education-item">
-                <h3>Dalian Neusoft University of Information - Dalian, China</h3>
-                <p class="date">Bachelor's degree, Electrical Engineering</p>
-                <p><a href="https://ee.neusoft.edu.cn/" target="_blank">School of Electrical Engineering</a></p>
-            </div>
-        </section>
+      <div class="job">
+        <h3>Design Engineering Manager</h3>
+        <p><strong>Cadence Design Systems</strong> · Sep 2023 – Present · Toronto, Canada</p>
+        <p>Collaborating across multiple groups, leading ongoing analog layout design in the industry’s most advanced technology nodes.</p>
+      </div>
 
-        <section id="papers">
-            <h2>Research Publications</h2>
-            
-            <div class="paper">
-                <h3>A High-speed and Low Power Electrical Link Transceiver</h3>
-                <p class="date">Master Thesis</p>
-                <p>On-chip wires present increasing latency and energy challenges as VLSI technologies scale. This research presents an energy-efficient on-chip transceiver with a hybrid transmitter, current-sense receiver, and self-testing blocks to overcome RC-limited channels.</p>
-                <a href="https://spectrum.library.concordia.ca/id/eprint/982490/" target="_blank" class="read-more">Read Full Thesis</a>
-            </div>
-            
-            <div class="paper">
-                <h3>A 8-Gb/S 0.256-pJ/B Transceiver for 5-mm on-Chip Interconnects in 130-nm CMOS</h3>
-                <p class="date">The 2017 IEEE International Symposium on Circuits & Systems (ISCAS)</p>
-                <p>This paper presents a transceiver for long on-chip links in 130-nm CMOS, featuring a hybrid-mode transmitter with current sense amplifier receiver for improved power efficiency.</p>
-                <a href="https://ieeexplore.ieee.org/document/8050443" target="_blank" class="read-more">View Paper on IEEE Xplore</a>
-            </div>
-        </section>
+      <div class="job">
+        <h3>Physical Design Manager</h3>
+        <p><strong>Rambus</strong> · Jul 2021 – Sep 2023 · Toronto, Canada</p>
+        <p>Managed the SerDes Layout Team of 7 engineers. Led the successful tapeout of the PCIe6 project under strict technical constraints. Rambus was acquired by Cadence in Q3 2023.</p>
+      </div>
 
-        <section id="blog">
-            <h2>Latest Blog Posts</h2>
-            
-            <div class="blog-post">
-                <h3>What's Analog Layout?</h3>
-                <p>Analog layout involves designing the physical layout of analog integrated circuits, placing and routing transistors, capacitors, and other components to create functional circuits that meet performance specifications.</p>
-                <p>Unlike digital layout, analog requires careful consideration of parasitic effects, matching, and noise to ensure circuit performance.</p>
-                <a href="https://jxd1207.github.io/blog" class="read-more">Continue Reading</a>
-            </div>
-        </section>
+      <div class="job">
+        <h3>Physical Design Manager</h3>
+        <p><strong>AnalogX</strong> · Jun 2020 – Jul 2021 · Toronto, Canada</p>
+        <p>Oversaw analog layout design activities. Company was acquired by Rambus in 2021.</p>
+      </div>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <div class="contact-info">
-                <p>Feel free to reach out for collaboration or inquiries</p>
-                <p class="contact-email">xd.chia[AT]email.com</p>
-                <div class="social-links">
-                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" title="IEEE Xplore"><i class="fas fa-book"></i></a>
-                    <a href="#" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
-                </div>
-            </div>
-        </section>
-    </main>
+      <div class="job">
+        <h3>Physical Design Engineer</h3>
+        <p><strong>AnalogX</strong> · May 2018 – Jun 2020 · Toronto, Canada</p>
+        <p>Specialized in SerDes layout design in 5nm, 7nm, and 22nm technologies.</p>
+      </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Xiangdong Jia. All rights reserved.</p>
-            <p>Specializing in Advanced Analog Custom Layout Design</p>
-        </div>
-    </footer>
+      <div class="job">
+        <h3>Research Assistant</h3>
+        <p><strong>Concordia University</strong> · Jun 2017 – May 2018 · Montreal, Canada</p>
+        <p>Conducted research on transimpedance amplifier (TIA) and latch design for optical receivers. Participated in chip verification and tapeout with TSMC 65nm.</p>
+      </div>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                window.scrollTo({
-                    top: targetElement.offsetTop - 120, // Adjusted for fixed header and nav
-                    behavior: 'smooth'
-                });
-                
-                // Update URL hash without scrolling
-                history.pushState(null, null, targetId);
-            });
-        });
+      <div class="job">
+        <h3>Graduate Research Assistant</h3>
+        <p><strong>Concordia University</strong> · Jan 2015 – May 2017 · Montreal, Canada</p>
+        <p>Worked on on-chip wireline transceiver design using TSMC 65nm and IBM 130nm technology. Successfully taped out designs in 65nm.</p>
+      </div>
+    </section>
 
-        // Simple animation for timeline items
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
+    <!-- Education -->
+    <section id="education" class="education">
+      <h2>Education</h2>
+      <div class="job">
+        <h3>Master’s Degree, Electrical and Electronics Engineering</h3>
+        <p><strong>Concordia University</strong> · 2015 – 2017</p>
+        <p>Field of interest: Analog and Mixed-Signal Circuits and Systems, Communications Circuits and Systems.<br>
+        Thesis: “A High-speed and Low Power Electrical Link Transceiver”.</p>
+      </div>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = 1;
-                    entry.target.style.transform = 'translateX(0)';
-                }
-            });
-        }, observerOptions);
+      <div class="job">
+        <h3>Bachelor’s Degree, Electrical and Electronics Engineering</h3>
+        <p><strong>Dalian Neusoft University of Information</strong> · 2010 – 2014</p>
+      </div>
 
-        document.querySelectorAll('.timeline-item, .paper, .blog-post').forEach(item => {
-            item.style.opacity = 0;
-            item.style.transform = 'translateX(-20px)';
-            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            observer.observe(item);
-        });
+      <div class="job">
+        <h3>Exchange Student, Electrical and Electronics Engineering</h3>
+        <p><strong>Tatung University</strong> · 2012 – 2013</p>
+      </div>
+    </section>
 
-        // Highlight active navigation link on scroll
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('nav a');
-            let currentSection = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= (sectionTop - 150)) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === currentSection) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <!-- Publications -->
+    <section id="publications" class="publications">
+      <h2>Publications</h2>
+      <ul>
+        <li><strong>A Power-Proportional, Dual-Bandwidth, and Constant-Delay Receiver Front-End for Energy-Efficient Dual-Rate Optical Links</strong>, IEEE Transactions on VLSI Systems, Jan 2023.</li>
+        <li><strong>Reconfiguration in Source-Synchronous Receivers for Short-Reach Parallel Optical Links</strong>, IEEE Transactions on VLSI Systems, Jul 2019.</li>
+        <li><strong>A High-speed and Low Power Electrical Link Transceiver</strong>, Master Thesis, Mar 2017.</li>
+        <li><strong>An 8-Gb/s 0.256-pJ/b Transceiver for 5-mm on-Chip Interconnects in 130-nm CMOS</strong>, IEEE ISCAS, 2017.</li>
+      </ul>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="blog">
+      <h2>Blog</h2>
+      <p><a href="#">Analog Layout vs Digital Layout: Key Differences</a></p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>
+        <a href="mailto:xd.chia@email.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/xiangdong-jia-84973a85/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/jxd1207" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Xiangdong Jia. All rights reserved.</p>
+  </footer>
+
+  <button id="backToTop" aria-label="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.style.display = window.scrollY > 200 ? "block" : "none";
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
