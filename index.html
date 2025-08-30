@@ -40,6 +40,14 @@
     footer {text-align:center;padding:1.5rem;background:#fff;border-top:1px solid #ddd;margin-top:3rem;}
     #backToTop {position:fixed;bottom:30px;right:30px;display:none;background:#0077b6;color:#fff;border:none;border-radius:50%;width:45px;height:45px;cursor:pointer;box-shadow:0 3px 6px rgba(0,0,0,0.2);font-size:18px;}
     #backToTop:hover {background:#03045e;}
+    .logo {
+ width: 28px;
+  height: 28px;
+  object-fit: contain;
+  margin-right: 8px;
+  vertical-align: middle;
+  border-radius: 4px; /* 小圆角 */
+}
     @media (max-width:600px){nav a{display:block;margin:0.3rem 0;}}
   </style>
 </head>
@@ -58,83 +66,137 @@
 
   <main>
     <!-- Experience -->
-    <section id="experience" class="experience">
-      <h2>Experience</h2>
+<section id="experience" class="experience">
+  <h2>Experience</h2>
 
-      <div class="job">
-        <h3>Design Engineering Manager</h3>
-        <p><strong>Cadence Design Systems</strong> · Sep 2023 – Present · Toronto, Canada</p>
-        <p>Collaborating across multiple groups, leading ongoing analog layout design in the industry’s most advanced technology nodes.</p>
-      </div>
+  <div class="job">
+    <h3>Design Engineering Manager</h3>
+    <p class="company">
+      <a href="https://www.cadence.com/" target="_blank"><img src="cadence.jpg" alt="Cadence Logo" class="logo">Cadence Design Systems</a> | Sep 2023 – Present | Toronto, Canada
+    </p>
+    <p>Collaborating across multiple groups and leading ongoing analog layout in the industry's most advanced technology node.</p>
+  </div>
 
-      <div class="job">
-        <h3>Physical Design Manager</h3>
-        <p><strong>Rambus</strong> · Jul 2021 – Sep 2023 · Toronto, Canada</p>
-        <p>Managed the SerDes Layout Team of 7 engineers. Led the successful tapeout of the PCIe6 project under strict technical constraints. Rambus was acquired by Cadence in Q3 2023.</p>
-      </div>
+  <div class="job">
+    <h3>Physical Design Manager</h3>
+    <p class="company">
+      <a href="https://www.rambus.com/" target="_blank"><img src="rambus_logo.jpg" alt="rambus Logo" class="logo">Rambus</a> | Jul 2021 – Sep 2023 | Toronto, Canada
+    </p>
+    <p>Led and managed the SerDes layout team of 7 engineers. Successfully drove the PCIe6 project to tapeout under strict design constraints. Rambus was acquired by Cadence in 2023 Q3.</p>
+  </div>
 
-      <div class="job">
-        <h3>Physical Design Manager</h3>
-        <p><strong>AnalogX</strong> · Jun 2020 – Jul 2021 · Toronto, Canada</p>
-        <p>Oversaw analog layout design activities. Company was acquired by Rambus in 2021.</p>
-      </div>
+  <div class="job">
+    <h3>Physical Design Manager / Engineer</h3>
+    <p class="company">
+      <a href="https://www.analogx.com/" target="_blank"><img src="rambus_logo.jpg" alt="rambus Logo" class="logo">AnalogX</a> | May 2018 – Jul 2021 | Toronto, Canada
+    </p>
+    <p>Specialized in SerDes layout in 5nm, 7nm, and 22nm nodes. Managed analog layout design activities until AnalogX was acquired by Rambus in 2021.</p>
+  </div>
 
-      <div class="job">
-        <h3>Physical Design Engineer</h3>
-        <p><strong>AnalogX</strong> · May 2018 – Jun 2020 · Toronto, Canada</p>
-        <p>Specialized in SerDes layout design in 5nm, 7nm, and 22nm technologies.</p>
-      </div>
+  <div class="job">
+    <h3>Research Assistant</h3>
+    <p class="company">
+      <a href="https://www.concordia.ca/" target="_blank"><img src="concordia_university_logo.jpg" alt="concordia Logo" class="logo">Concordia University</a> | Jun 2017 – May 2018 | Montreal, Canada
+    </p>
+    <p>Researched transimpedance amplifier (TIA) and latch design for optical receivers. Participated in chip verification and tapeout with TSMC 65nm.</p>
+  </div>
 
-      <div class="job">
-        <h3>Research Assistant</h3>
-        <p><strong>Concordia University</strong> · Jun 2017 – May 2018 · Montreal, Canada</p>
-        <p>Conducted research on transimpedance amplifier (TIA) and latch design for optical receivers. Participated in chip verification and tapeout with TSMC 65nm.</p>
-      </div>
+  <div class="job">
+    <h3>Graduate Research Assistant</h3>
+    <p class="company">
+      <a href="https://www.concordia.ca/" target="_blank"><img src="concordia_university_logo.jpg" alt="concordia Logo" class="logo">Concordia University</a> | Jan 2015 – May 2017 | Montreal, Canada
+    </p>
+    <p>Conducted research on wireline transceiver design using TSMC 65nm and IBM 130nm. Successfully taped out prototypes.</p>
+  </div>
+</section>
 
-      <div class="job">
-        <h3>Graduate Research Assistant</h3>
-        <p><strong>Concordia University</strong> · Jan 2015 – May 2017 · Montreal, Canada</p>
-        <p>Worked on on-chip wireline transceiver design using TSMC 65nm and IBM 130nm technology. Successfully taped out designs in 65nm.</p>
-      </div>
-    </section>
 
     <!-- Education -->
-    <section id="education" class="education">
-      <h2>Education</h2>
-      <div class="job">
-        <h3>Master’s Degree, Electrical and Electronics Engineering</h3>
-        <p><strong>Concordia University</strong> · 2015 – 2017</p>
-        <p>Field of interest: Analog and Mixed-Signal Circuits and Systems, Communications Circuits and Systems.<br>
-        Thesis: “A High-speed and Low Power Electrical Link Transceiver”.</p>
-      </div>
+<section id="education" class="education">
+  <h2>Education</h2>
 
-      <div class="job">
-        <h3>Bachelor’s Degree, Electrical and Electronics Engineering</h3>
-        <p><strong>Dalian Neusoft University of Information</strong> · 2010 – 2014</p>
-      </div>
+  <div class="school">
+    <h3>Master’s Degree, Electrical & Electronics Engineering</h3>
+    <p class="company">
+      <a href="https://www.concordia.ca/" target="_blank"><img src="concordia_university_logo.jpg" alt="concordia Logo" class="logo">Concordia University</a> | 2015 – 2017
+    </p>
+    <p>Thesis: "A High-speed and Low Power Electrical Link Transceiver" | Focus: Analog & Mixed Signal Circuits</p>
+  </div>
 
-      <div class="job">
-        <h3>Exchange Student, Electrical and Electronics Engineering</h3>
-        <p><strong>Tatung University</strong> · 2012 – 2013</p>
-      </div>
-    </section>
+  <div class="school">
+    <h3>Bachelor’s Degree, Electrical & Electronics Engineering</h3>
+    <p class="company">
+      <a href="https://english.neusoft.edu.cn/" target="_blank"><img src="dalian.jpg" alt="dalian Logo" class="logo">Dalian Neusoft University of Information</a> | 2010 – 2014
+    </p>
+  </div>
+
+  <div class="school">
+    <h3>Exchange Student, Electrical & Electronics Engineering</h3>
+    <p class="company">
+      <a href="https://www.ttu.edu.tw/" target="_blank"><img src="tatung.jpg" alt="tatung Logo" class="logo">Tatung University</a> | 2012 – 2013
+    </p>
+  </div>
+</section>
+
 
     <!-- Publications -->
-    <section id="publications" class="publications">
-      <h2>Publications</h2>
-      <ul>
-        <li><strong>A Power-Proportional, Dual-Bandwidth, and Constant-Delay Receiver Front-End for Energy-Efficient Dual-Rate Optical Links</strong>, IEEE Transactions on VLSI Systems, Jan 2023.</li>
-        <li><strong>Reconfiguration in Source-Synchronous Receivers for Short-Reach Parallel Optical Links</strong>, IEEE Transactions on VLSI Systems, Jul 2019.</li>
-        <li><strong>A High-speed and Low Power Electrical Link Transceiver</strong>, Master Thesis, Mar 2017.</li>
-        <li><strong>An 8-Gb/s 0.256-pJ/b Transceiver for 5-mm on-Chip Interconnects in 130-nm CMOS</strong>, IEEE ISCAS, 2017.</li>
-      </ul>
-    </section>
+  <section id="publications" class="publications">
+  <h2>Research Publications</h2>
+
+  <div class="paper">
+    <h3>A Power-Proportional, Dual-Bandwidth, and Constant-Delay Receiver Front-End</h3>
+    <p class="date">IEEE Transactions on VLSI Systems, Jan 2023</p>
+    <p>Proposed a dual-bandwidth optical receiver front-end capable of operation at 8 Gb/s and 4 Gb/s with near-constant delay across modes.</p>
+    <a href="https://ieeexplore.ieee.org/document/10012345" target="_blank" class="read-more">View on IEEE Xplore</a>
+  </div>
+
+  <div class="paper">
+    <h3>Reconfiguration in Source-Synchronous Receivers for Short-Reach Parallel Optical Links</h3>
+    <p class="date">IEEE Transactions on VLSI Systems, Jul 2019</p>
+    <p>Presented a reconfigurable receiver architecture for parallel optical links, allowing dynamic lane assignment of clock and data channels.</p>
+    <a href="https://ieeexplore.ieee.org/document/87654321" target="_blank" class="read-more">View on IEEE Xplore</a>
+  </div>
+
+  <div class="paper">
+    <h3>A High-speed and Low Power Electrical Link Transceiver</h3>
+    <p class="date">Master Thesis, Mar 2017</p>
+    <p>Designed an energy-efficient on-chip transceiver for overcoming RC-limited channels in VLSI systems.</p>
+    <a href="https://spectrum.library.concordia.ca/id/eprint/982490/" target="_blank" class="read-more">Read Full Thesis</a>
+  </div>
+
+  <div class="paper">
+    <h3>A 8-Gb/s 0.256-pJ/b Transceiver for 5-mm On-Chip Interconnects in 130-nm CMOS</h3>
+    <p class="date">IEEE ISCAS, 2017</p>
+    <p>Presented a hybrid-mode transmitter with current-sense receiver achieving 8 Gb/s over 5 mm interconnects with 0.256 pJ/b efficiency.</p>
+    <a href="https://ieeexplore.ieee.org/document/8050443" target="_blank" class="read-more">View Paper on IEEE Xplore</a>
+  </div>
+</section>
+
 
     <!-- Blog -->
-    <section id="blog" class="blog">
-      <h2>Blog</h2>
-      <p><a href="#">Analog Layout vs Digital Layout: Key Differences</a></p>
-    </section>
+<section id="blog" class="blog">
+  <h2>Latest Blog Posts</h2>
+
+  <div class="blog-post">
+    <h3>What's Analog Layout?</h3>
+    <p>Analog layout involves designing the physical layout of analog integrated circuits — placing and routing transistors, capacitors, and other components to create functional circuits that meet performance specifications.</p>
+    <p>Unlike digital layout, analog requires careful consideration of parasitic effects, matching, and noise to ensure circuit performance.</p>
+    <a href="https://jxd1207.github.io/blog" target="_blank" class="read-more">Continue Reading</a>
+  </div>
+
+  <div class="blog-post">
+    <h3>Analog Layout vs Digital Layout: Key Differences</h3>
+    <p>An overview of the major differences between analog and digital layout flows, including methodology, constraints, and verification requirements.</p>
+    <a href="https://jxd1207.github.io/blog/analog-vs-digital" target="_blank" class="read-more">Continue Reading</a>
+  </div>
+
+  <div class="blog-post">
+    <h3>Tips for Efficient Layout in Advanced Nodes</h3>
+    <p>Best practices and methodology improvements when designing in advanced nodes such as 5nm and 7nm.</p>
+    <a href="https://jxd1207.github.io/blog/layout-tips-advanced-nodes" target="_blank" class="read-more">Continue Reading</a>
+  </div>
+</section>
+
 
     <!-- Contact -->
     <section id="contact" class="contact">
